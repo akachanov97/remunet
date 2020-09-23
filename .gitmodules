@@ -1,0 +1,3 @@
+[submodule "containernet"]
+	path = containernet
+	url = git@github.com:containernet/containernet.git
