@@ -1,4 +1,4 @@
-"Logging functions for Mininet."
+"Logging functions for Remunet."
 
 from mininet.log import *
 
