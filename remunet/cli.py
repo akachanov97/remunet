@@ -26,7 +26,7 @@ and bandwidth ('iperf'.)
 """
 
 from subprocess import call
-from cmd import Cmd
+from remunet.cmd import RCmd
 from os import isatty
 from select import poll, POLLIN
 import select
@@ -42,7 +42,7 @@ from remunet.term import makeTerms, runX11
 from remunet.util import ( quietRun, dumpNodeConnections,
                            dumpPorts )
 
-class CLI( Cmd ):
+class CLI( RCmd ):
     "Simple command-line interface to talk to nodes."
 
     prompt = 'remu> '
@@ -60,7 +60,7 @@ class CLI( Cmd ):
         self.inPoller = poll()
         self.inPoller.register( stdin )
         self.inputFile = script
-        Cmd.__init__( self )
+        RCmd.__init__( self )
         # Containernet allows '.' in host identifiers to build human readable hierarchical name spaces:
         self.identchars = string.ascii_letters + string.digits + '_' + '.'
         info( '*** Starting CLI:\n' )
@@ -146,7 +146,7 @@ class CLI( Cmd ):
 
     def do_help( self, line ):
         "Describe available CLI commands."
-        Cmd.do_help( self, line )
+        RCmd.do_help( self, line )
         if line is '':
             output( self.helpStr )
 
