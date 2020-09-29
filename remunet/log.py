@@ -8,7 +8,9 @@ class RemunetLogger(MininetLogger, object):
     def _log(self, level, msg, args, exc_info=None, extra=None, stack_info=False):
         super()._log(level, msg, args, exc_info, extra, stack_info)
 
-        print("--->", msg)
+        """
+            #TODO THERE ARE YOU NEED TO WRITE OWN OUTPUT
+        """
 
 
 lg = RemunetLogger()

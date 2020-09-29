@@ -45,7 +45,7 @@ from remunet.util import ( quietRun, dumpNodeConnections,
 class CLI( Cmd ):
     "Simple command-line interface to talk to nodes."
 
-    prompt = 'containernet> '
+    prompt = 'remu> '
 
     def __init__( self, mininet, stdin=sys.stdin, script=None ):
         """Start and run interactive or batch mode CLI
@@ -465,6 +465,9 @@ class CLI( Cmd ):
                 # it's possible to interrupt ourselves after we've
                 # read data but before it has been printed.
                 node.sendInt()
+                """
+                    #TODO THERE ARE YOU NEED TO SEND OWN INTERRUPT
+                """
             except select.error as e:
                 # pylint: disable=unpacking-non-sequence
                 errno_, errmsg = e.args
