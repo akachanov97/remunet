@@ -373,7 +373,7 @@ class CLI( Cmd ):
         start = time.time()
         self.onecmd(line)
         elapsed = time.time() - start
-        self.stdout.write("*** Elapsed time: %0.6f secs\n" % elapsed)
+        output("*** Elapsed time: %0.6f secs\n" % elapsed)
 
     def do_links( self, _line ):
         "Report on links"
