@@ -3,7 +3,6 @@
 from mininet.log import *
 
 
-
 class RemunetLogger(MininetLogger, object):
 
     def _log(self, level, msg, args, exc_info=None, extra=None, stack_info=False):
