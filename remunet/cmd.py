@@ -1,5 +1,6 @@
 
 from cmd import Cmd
+from remunet.rctl import RemouteController
 
 
 class RCmd(Cmd):
@@ -27,10 +28,7 @@ class RCmd(Cmd):
                 else:
                     if self.use_rawinput:
                         try:
-                            """
-                                #TODO THERE ARE YOU NEED TO USE YOUR OWN INPUT METHOD
-                            """
-                            line = input(self.prompt)
+                            line = RemouteController().input(self.prompt)
                         except EOFError:
                             line = 'EOF'
                     else:
