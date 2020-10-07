@@ -1,6 +1,7 @@
 import os
 import socket
 
+import UF.ufsocket as ufsocket
 import rns
 
 
@@ -50,7 +51,7 @@ class RemouteController(object):
 
             __socket.connect((self.__host, self.__port))
             __socket.send(pkg)
-            respose = __socket.recv(1024)
+            respose = ufsocket.recvall(__socket)
         except ConnectionRefusedError:
             print("Error! Host \"{}\" not allowed!".format(self.server))
             return False

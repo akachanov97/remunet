@@ -1,1 +1,2 @@
-git+https://github.com/akachanov97/remu-serializer.git@v0.0.2#egg=rns
+git+https://github.com/akachanov97/remu-serializer.git@v0.0.2-1#egg=rns
+git+https://github.com/akachanov97/UF.git@v0.0.1-1#egg=uf
